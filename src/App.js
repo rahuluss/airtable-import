@@ -3,7 +3,7 @@ import { HashRouter as Router, Link, Route } from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
 import Home from './home.js'
-import Base from './samplebase.js'
+import Base from './base.js'
 
 class App extends Component {
   render() {

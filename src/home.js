@@ -57,7 +57,7 @@ class CSVUploadModal extends Component {
   }
 
   uploadFile() {
-    alert('The file upload UI has been skipped in this demo. It would stay the same. The modal you are about to see next is what would happen after they are done picking a file and the file is done uploading.')
+    alert('The file upload UI has been skipped in this demo. It would be unchanged from the current Airtable version.\n\nThe modal you are about to see next is what would happen after they are done picking a file and the file is done uploading.')
     this.props.updateStage()
   }
 
@@ -118,7 +118,7 @@ class EnableRichFieldModal extends Component {
           <div className="modalBody modalExpandText" onClick={this.toggleRichFieldsExplanation}>{this.state.richFieldsExplanationShown ? 'Show Less ▴' : 'What are Rich Fields? ▾'}</div>
           {this.state.richFieldsExplanationShown ? 
             <div className="modalBody expanded">
-              <div>Unlike a spreadsheet, Airtable fields (columns) have specific “types” that allow you to store rich content in each record. For example, a table can contain records (rows) with attachments, long text notes, checkboxes, and links to other records. <a className="modalLink" href="https://support.airtable.com/hc/en-us/articles/203229705#single-select" target="_blank">Click here to learn more.</a></div>
+              <div>Unlike a spreadsheet, Airtable fields (columns) have specific “types” that allow you to store rich content in each record. For example, a table can contain records (rows) with attachments, long text notes, checkboxes, and links to other records. <a className="modalLink" href="https://support.airtable.com/hc/en-us/articles/203229705" target="_blank">Click here to learn more.</a></div>
             </div> : ''}
           <div className="headerPreviewTitle">Rich fields detected for 21 out of 22 columns</div>
           <HeaderPreviewer richFields={this.state.richFieldsEnabled}/>
@@ -126,7 +126,7 @@ class EnableRichFieldModal extends Component {
             <input className="modalCheckbox" name="test" checked={this.state.richFieldsEnabled} onChange={this.handleRichFieldsChange} type="checkbox" />
             <div className="modalCheckboxText">Convert data to rich fields</div>
           </div>
-          <Link to='/samplebase' className="modalButton" style={{backgroundColor: '#8B46FF'}}>{this.state.richFieldsEnabled ? 'Import with rich fields' : 'Import without rich fields'}</Link>
+          <Link to='/samplebase' className="modalButton" style={{backgroundColor: '#8B46FF'}}>{this.state.richFieldsEnabled ? 'Import with rich fields' : 'Import as plain text'}</Link>
         </ReactModal>
       )
   }

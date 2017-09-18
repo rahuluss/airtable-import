@@ -325,6 +325,7 @@
 #tableContainer {
   margin-top: 121px;
   display: flex;
+  background-color: #eee;
 }
 
 #table {
