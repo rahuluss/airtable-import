@@ -1,0 +1,408 @@
+@font-face {
+  font-family: Helvetica Neue;
+  font-weight: 300;
+  src: url("./assets/fonts/Helvetica Neue Light.otf") format("truetype"); }
+@font-face {
+  font-family: Helvetica Neue;
+  font-weight: 500;
+  src: url("./assets/fonts/Helvetica Neue Medium.otf") format("truetype"); }
+@font-face {
+  font-family: Helvetica Neue;
+  font-weight: 700;
+  src: url("./assets/fonts/Helvetica Neue Bold.otf") format("truetype"); }
+@font-face {
+  font-family: Helvetica Neue;
+  font-weight: 900;
+  src: url("./assets/fonts/Helvetica Neue Heavy.otf") format("truetype"); }
+
+@font-face {
+  font-family: Lato;
+  font-weight: 300;
+  src: url("./assets/fonts/Lato-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: Lato;
+  font-weight: 500;
+  src: url("./assets/fonts/Lato-Medium.ttf") format("truetype"); }
+@font-face {
+  font-family: Lato;
+  font-weight: 600;
+  src: url("./assets/fonts/Lato-Semibold.ttf") format("truetype"); }
+@font-face {
+  font-family: Lato;
+  font-weight: 900;
+  src: url("./assets/fonts/Lato-Black.ttf") format("truetype"); }
+
+
+/* HOME VIEW */
+
+#homeContainer {
+  font-family: Lato;
+  background-color: #fcfcfc;
+}
+
+#homeHeaderContainer {
+  position: sticky;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 2px solid #f7f7f7;
+}
+
+#homeBodyContainer {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center; 
+}
+
+#newBaseButton {
+  position: absolute;
+  margin-top: 219px;
+  margin-left: 145px;
+  height: 75px;
+  width: 75px;
+  border-radius: 3px;
+  background-color: black;
+  opacity: 0;
+}
+
+#newBaseButton:hover {
+  opacity: 0.1;
+  cursor: pointer;
+}
+
+.homeHeaderImage {
+  height: 50px;
+  width: auto;
+}
+
+.noscroll {
+  overflow-y: hidden;
+}
+
+/* MODAL */
+
+.modal {
+  position: absolute;
+  width: 430px;
+  background-color: white;
+  opacity: 1;
+  outline: none;
+  padding: 35px;
+  border-radius: 8px;
+  border: 2px solid rgba(0,0,0,.2);
+  font-family: Lato;
+  color: #4d4d4d;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,.1)
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+
+.modalHeaderText {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.modalSubheader {
+  font-weight: 600;
+  padding-bottom: 15px;
+  font-size: 14.5px;
+}
+
+.modalBody {
+  font-weight: 500;
+  font-size: 13px;
+  padding-bottom: 15px;
+  line-height: 19px;
+}
+
+.modalBody.expanded {
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.ReactModal__Body--open {
+  overflow-y: hidden;
+}
+
+.modalCloseButton {
+  background-image: url("./assets/images/icons/modal-close.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 20px;
+  width: 20px;
+}
+
+.modalCloseButton:hover {
+  background-image: url("./assets/images/icons/modal-close-highlighted.png");
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.modalButton {
+  display: inline-block;
+  width: auto;
+  color: white;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.modalButton:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.modalButton.right {
+  float: right;
+}
+
+.modalBreak {
+  padding-top: 30px;
+  margin-bottom: 35px;
+  border-bottom: 2px solid #eee;
+}
+
+.modalTextInput {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 2px solid #eee;
+  height: 70px;
+  background-color: #eee;
+  outline: none;
+  padding: 5px;
+  font-family: Lato;
+  font-size: 13px;
+  box-sizing: border-box;
+  resize: none;
+  color: #676767;
+}
+
+.modalTextInput:focus {
+  border: 2px solid #ccc;
+}
+
+.modalCheckbox {
+  outline: none;
+}
+
+.modalCheckboxContainer {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.modalCheckboxText {
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.modalExpandText {
+  color: #2D7FF9;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.modalImage {
+  display: inline-block;
+  height: 150px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 80px;
+}
+
+.modalLink {
+  text-decoration: none;
+  color: #2D7FF9;
+}
+
+.headerPreviewContainer {
+  display: flex;
+  background-color: #f5f5f5;
+  margin-bottom: 15px;
+  padding-left: 5px;
+  border-radius: 3px;
+  overflow-x: scroll;
+}
+
+.headerPreviewTitle {
+  font-size: 13px;
+  font-weight: 700;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.headerItem {
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.richHeader {
+  display: flex;
+  align-items: center;
+}
+
+.headerItemImage {
+  height: 15px;
+  padding-right: 10px;
+}
+
+.headerItemImage:hover {
+  cursor: pointer;
+}
+
+.modalTooltip {
+  font-weight: 400;
+  font-size: 10px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  max-width: 150px !important;
+  max-height: auto !important;
+}
+
+/* SAMPLE BASE */
+
+#baseContainer {
+  overflow-y: hidden;
+}
+
+.baseHeaderContainer {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e82a49;
+  border-bottom: 2px solid #f7f7f7;
+}
+
+#basePrimaryHeader {
+  border-bottom: none;
+}
+
+#baseSecondaryHeader {
+  background-color: white;
+  margin-top: 80px;
+  border-bottom: 2px solid #ddd
+}
+
+.basePrimaryHeaderImage {
+  height: 80px;
+  width: auto;
+}
+
+.baseSecondaryHeaderImage {
+  height: 40px;
+  width: auto;
+}
+
+#tableContainer {
+  margin-top: 121px;
+  display: flex;
+}
+
+#table {
+  position: absolute;
+  height: 600px;
+  z-index: 5;
+}
+
+.prompt {
+  position: fixed;
+  bottom: 40px;
+  left: 50px;
+  border-radius: 3px;
+  background-color: #8B46FF;
+  font: Helvetica Neue;
+  color: white;
+  padding: 20px;
+  font-weight: 700;
+  z-index: 10;
+}
+
+.promptTitle {
+  padding-bottom: 10px;
+}
+
+.promptBody {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255,255,255, .9);
+  padding-bottom: 5px;
+  display: inline-block;
+  line-height: 15px;
+}
+
+.promptImage {
+  display: inline-block;
+  height: 15px;
+  margin-bottom: -2px;
+  padding-left: 5px;
+}
+
+.promptDismiss {
+  display: inline-block;
+  float: right;
+  background-color: rgba(0,0,0,.3);
+  font-size: 10px;
+  color: rgba(255,255,255,.7);
+  font-weight: 700;
+  margin-top: -5px;
+  border-radius: 2px;
+  padding: 8px 12px;
+  margin-left: 50px;
+}
+
+.promptDismiss:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.revert {
+  height: 15px;
+  width: auto;
+  position: absolute;
+  margin-top: 7px;
+  z-index: 10;
+}
+
+.revert:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.baseTooltip {
+  font-weight: 500;
+  font-size: 11px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  max-width: 150px !important;
+  max-height: auto !important;
+}
+
